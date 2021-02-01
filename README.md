@@ -9,3 +9,13 @@
     change the port in the location /{} to localhost:<H>
     run 'systemctl restart nginx'
     run 'pm2 save'
+
+## To push to Docker Hub
+
+Login with docker login --username=my-username
+
+Get docker image with `docker images`
+
+Push to docker with 
+    
+    docker push <tag>
