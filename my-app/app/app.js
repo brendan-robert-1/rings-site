@@ -3,14 +3,15 @@ const app = express()
 const port = 3080
 let mysql = require('mysql');
 
-connection.changeUser({database : ''}, function(err) {
-    if (err) throw err;
-  });
+
 app.get('/', (req, res)=>{
    let connection = mysql.createConnection({
         host:'',
         user: '',
         password:'',
+    });
+    connection.changeUser({database : ''}, function(err) {
+        if (err) throw err;
     });
     let sql = '';
     connection.query(sql, (error, results, fields)=>{
