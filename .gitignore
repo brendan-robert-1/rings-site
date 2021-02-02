@@ -1,3 +1,4 @@
 .vscode/extensions.json
 init.sql
 notes.txt
+my-app/app/config/config.js

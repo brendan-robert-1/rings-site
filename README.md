@@ -1,6 +1,6 @@
 
 ## To build within the VM run 
-    docker build -t brendanrobert1/rings-site-image .
+    docker build --no-cache -t brendanrobert1/rings-site-image  .
 
 ## To run within VM and expose container port (C) to host port (H) run:  
     docker run -p <H>:<C> -it brendanrobert1/rings-site-image
@@ -28,3 +28,6 @@ Push to docker with
 
 ## Get the host ip within the container
     /sbin/ip route|awk '/default/ { print $3 }'
+
+## Docker get the ip address of a docker container:
+    docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
