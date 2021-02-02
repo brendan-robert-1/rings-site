@@ -19,7 +19,7 @@ app.get('/', (req, res)=>{
         }
         console.log(results);
         console.log('output: ' + JSON.stringify(results));
-        res.send("Hello from docker!\n'Users in database\n" + JSON.stringify(results));
+        res.send("Hello from docker!\n'Users in database");
     });
 })
 
